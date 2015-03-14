@@ -1,19 +1,14 @@
 package net.zero.trainingapp;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-public class DisplayMessageActivity extends ActionBarActivity {
+public class DisplayMessageActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +23,8 @@ public class DisplayMessageActivity extends ActionBarActivity {
         textView.setText(message);
 
         setContentView(textView);
+
+        getActionBar().setDisplayHomeAsUpEnabled(true);
 //
 //        getSupportFragmentManager().beginTransaction()
 //                .add(R.id.container, new PlaceholderFragment()).commit();
