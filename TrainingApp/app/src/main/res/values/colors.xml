@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="background_color">#ED6F22</color>
+    button_pressed    <color name="background_color">#ED6F22</color>
     <color name="actionbar_text">#FF00FF</color>
+
+    <color name="button_normal">#99ff99</color>
+    <color name="button_pressed">#6666ff</color>
+    <color name="button_selected">#ff6666</color>
+    <color name="button_disabled">#666666</color>
 </resources>

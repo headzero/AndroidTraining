@@ -10,4 +10,6 @@
     <string name="title_activity_display_message">DisplayMessageActivity</string>
     <string name="hello_world">Hello world!</string>
 
+    <string name="test_button_string">test button</string>
+
 </resources>
