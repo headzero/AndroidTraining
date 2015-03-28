@@ -3,12 +3,15 @@ package net.zero.trainingapp;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 
 public class DisplayMessageActivity extends Activity {
+
+    private static final String TAG = DisplayMessageActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +28,38 @@ public class DisplayMessageActivity extends Activity {
         setContentView(textView);
 
         getActionBar().setDisplayHomeAsUpEnabled(true);
-//
-//        getSupportFragmentManager().beginTransaction()
-//                .add(R.id.container, new PlaceholderFragment()).commit();
+        Log.d(TAG, "onCreate");
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, "onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "onDestroy");
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -53,14 +83,4 @@ public class DisplayMessageActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-//    public static class PlaceholderFragment extends Fragment {
-//
-//        public PlaceholderFragment(){}
-//
-//        @Override
-//        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-//            View rootView = inflater.inflate(R.layout.fragment_display_message, container, false);
-//            return super.onCreateView(inflater, container, savedInstanceState);
-//        }
-//    }
 }
